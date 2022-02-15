@@ -37,7 +37,7 @@ class Ensena {
     myHeaders.append('pragma', 'no-cache');
     myHeaders.append('cache-control', 'no-cache');
     myHeaders.set("Authorization",this.authorization)
-    return fetch("/api/v1/me", {
+    return fetch("https://api.cooding.io/me", {
              headers: myHeaders 
           })
           .then((res)=> {   return res.status==200?res.json():this.redirect() })
@@ -56,7 +56,7 @@ class Api {
     constructor(process) {
         this._process = process;
         this.msg = true
-        this.url = "/api/v1/"
+        this.url = "https://api.cooding.io/"
     }
 
     SetDomain(url){

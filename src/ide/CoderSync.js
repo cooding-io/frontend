@@ -1,6 +1,6 @@
 import socketIOClient from "socket.io-client";
 import {TypeCode,Type} from './codes'
-import {Api,GenerateUUID } from '../core/ensena'
+import {Api,GenerateUUID } from '../core/cooding'
 
 const ENDPOINT = "https://ws-ide.xn--ensea-rta.cl";
 const socket = socketIOClient(ENDPOINT); 
