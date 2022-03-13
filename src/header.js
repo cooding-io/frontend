@@ -120,7 +120,7 @@ function Header() {
             </li>
             {/* User Account*/}
             <li className="dropdown user user-menu">
-              <a href="#" className="waves-effect waves-light dropdown-toggle w-auto l-h-12 bg-transparent p-0 no-shadow" title="User" data-bs-toggle="modal" data-bs-target="#quick_user_toggle">
+              <a href="#" className="waves-effect waves-light dropdown-toggle w-auto l-h-12 bg-transparent p-0 no-shadow" title="User" data-bs-toggle="modal" data-bs-target="#quick_user_toggle2">
                 <div className="d-flex pt-1">
                   <div className="text-end me-10">
                     <p className="pt-5 fs-14 mb-0 fw-700 text-white">Manuel Alba</p>

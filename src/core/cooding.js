@@ -48,7 +48,7 @@ class Ensena {
     New(service,obj){}
     Update(service,id,obj){}
     redirect(){
-        window.location.href  ="/oauth2/login?client_id=7nywNebh7Q"
+        window.location.href  ="https://oauth2.cooding.io/login/?client_id=7nywNebh7Q"
     }
 }
 
@@ -58,12 +58,9 @@ class Api {
         this.msg = true
         this.url = "https://api.cooding.io/"
     }
-
     SetDomain(url){
         this.url = url 
     }
-
-
     CallProcess(process, data, method) {
 
         let args = {}

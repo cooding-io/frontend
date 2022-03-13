@@ -10,6 +10,7 @@ function Bar({Lang,Coder}){
     const [code, setCode] = useState("Cpp");
 
     let handleChange=(value)=>{
+      value = value.target.value
       setCode(value)
       Coder.changeLang(value)
     }
@@ -29,64 +30,43 @@ function Bar({Lang,Coder}){
     // }
 
 
-    return  <div className=" sidebar-left sidebar-dark o-hidden" data-perfect-scrollbar  style={{"background":"#2c353c"}}>
-    <div className="sidebar-p-y">
-      <div className="sidebar-heading">Configuraciones</div>
-      <ul className="sidebar-menu sm-active-button-bg">
+    return  <div className="card">
+    <div className="card-header" style={{'margin-left': '-13px'}}>
+      <h5 className="card-title ">Configuracion</h5>
+      <div className="card-actions float-end">
+   
+      </div>
+    </div>
+    <div className="card-body">
+      <div className="row g-0">
 
-      {/* <li className="sidebar-menu-item">
-          <a className="sidebar-menu-button" >
-          <Checkbox  defaultChecked={true} onChange={()=>{ }}>  {" "} </Checkbox>
-            AutoGuardado
-          </a>
-        </li> */}
+        <div className="">
+        
+                <div class="mb-3">
+												
+													<select class="form-select" id="example-select"  defaultValue="C++" value={Lang}  onChange={handleChange} >
+														<option value="Cpp" >C++</option>
+                            <option value="Python" >Python</option>
+                            <option value="Java"> Java</option>
+                            <option value="Golang" >Golang</option>
+                            <option value="SQL" >SQL</option>
+													
+													</select>
+												</div>
 
-        <li className="sidebar-menu-item">
-          <a className="sidebar-menu-button" >
-            {/* <Select defaultValue="C++" value={Lang}  style={{ width: 120 }} onChange={handleChange}>
-                 {Langs.map((l,ix)=>{
-                        return   <Option selected={Lang==l.val}  value={l.val}>{l.name}</Option> 
-                    })}
-           
-            </Select> */}
-          </a>
-        </li>
-        <li className="sidebar-menu-item">
-          <a className="sidebar-menu-button" onClick={()=>{ Coder.Exec() }} >
-            <i className="sidebar-menu-icon sidebar-menu-icon--left material-icons">play_circle_outline</i> Ejecutar
-          </a>
-        </li>
-        <li className="sidebar-menu-item">
-          <a className="sidebar-menu-button" onClick={()=>{ Coder.Reset(code)}} >
-            <i className="sidebar-menu-icon sidebar-menu-icon--left material-icons">stop</i> Resetear
-          </a>
-        </li>
-        {/* <li className="sidebar-menu-item">
-          <a className="sidebar-menu-button" >
-            <i className="sidebar-menu-icon sidebar-menu-icon--left material-icons">sync</i> Cargar
-          </a>
-        </li>
+                        <div class="mb-3">
+												
+                        <button type="button" onClick={()=>{Coder.Exec() }} className="w-100 waves-effect waves-light btn btn-primary mb-5">Ejecutar</button>
+                      </div>
+                      <div class="mb-3">
+												
+                      <button type="button"  onClick={()=>{ Coder.Reset(code)}}  className="w-100 waves-effect waves-light btn btn-danger mb-5">Reset</button>
+                      </div>
 
-        <li className="sidebar-menu-item">
-          <a className="sidebar-menu-button" >
-            <i className="sidebar-menu-icon sidebar-menu-icon--left material-icons">save</i> Guardar
-          </a>
-        </li>
-
-        <li className="sidebar-menu-item">
-          <a className="sidebar-menu-button" >
-          <i class="fas fa-hand-paper"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ayuda
-          </a>
-        </li> */}
-
+        
+         </div>
+      </div>
     
-
-    
-      </ul>
-
-      
-
- {lengthAdminCourses>0?<Admin/>:null}
    </div>
   </div>
 }

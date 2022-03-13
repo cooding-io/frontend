@@ -50,17 +50,19 @@ socket.on("broadcast", data => {
 
 export default class Coder {
     constructor(user, OBJ) {
-        return 
+      
     this._lock = false 
     this._lock2 = false 
     this._code = ""
-    this.user = user.id
+
     this.setCode = OBJ.setCode
     this.setLang= OBJ.setLang
     this.lang = OBJ.lang
     this.setErr= OBJ.setErr
     this.setURL= OBJ.setURL
     this.code = OBJ.code
+    return 
+    this.user = user.id
     sync[this.user] = this
     // socket.emit('SEND',{uuid,id:this.user,sync:true})
    
@@ -114,6 +116,7 @@ export default class Coder {
     Exec(){
         
 
+        console.log("THIS",this)
         let compiler = new Api("compiler/" + this.lang.toLowerCase())
         compiler.SetDomain("https://ide.xn--ensea-rta.cl/")
         if (this.lang.toLowerCase() =="sql"){

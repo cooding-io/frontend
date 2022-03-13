@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function NavBar() {
 
@@ -9,12 +10,12 @@ function NavBar() {
     </label>
     {/* Sample menu definition */}
     <ul id="main-menu" className="sm sm-blue">
-      <li  ><a href="index.html"><i data-feather="code" />IDE</a></li>		  
-      <li><a href="mailbox.html"><i data-feather="database" />Database</a></li>
-      <li><a href="extra_calendar.html"><i data-feather="terminal" />Terminal</a></li>
-      <li><a href="contact_app_chat.html"><i data-feather="folder" />Courses</a></li>
-      <li><a href="contact_app_chat.html"><i data-feather="codepen" />Udpiler</a></li>
-      <li><a href="contact_app_chat.html"><i data-feather="user" />Profile</a></li>
+      <li  ><any> <Link to="/app/"><i data-feather="code" />IDE</Link> </any> </li>		  
+      <li><any> <Link to="/app/database"><i data-feather="database" />Database</Link> </any> </li>
+      <li><any> <Link to="/app/terminal"><i data-feather="terminal" />Terminal</Link> </any> </li>
+      <li><any> <Link to="/app/courses"><i data-feather="folder" />Courses</Link> </any> </li>
+      <li><any> <Link to="/app/udpiler"><i data-feather="codepen" />Udpiler</Link> </any> </li>
+      <li><any> <Link to="/app/profile"><i data-feather="user" />Profile</Link> </any> </li>
 
 
     </ul>
